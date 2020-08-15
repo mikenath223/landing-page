@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Query from '../components/Query';
+import { getQuestions } from '../lib/firebase'
 import {
   loadData,
   selectApiData,
@@ -11,9 +12,10 @@ const App = () => {
   const queryAppData = useSelector(selectApiData);
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   // dispatch(loadData())
-  // }, [])
+  useEffect(() => {
+    getQuestions()
+    // dispatch(loadData())
+  }, [])
 
   return (
     <div className="App">
