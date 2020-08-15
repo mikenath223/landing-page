@@ -32,11 +32,11 @@ const App = () => {
   }
 
   // if (!isLoaded) {
-    return (
-      <div className="App">
-        <Homepage />;
+  return (
+    <div className="App">
+      <Homepage />
     </div>
-    )
+  )
   // }
 
   return (
@@ -45,7 +45,7 @@ const App = () => {
         surveyApiData={surveyApiData}
       />
     </div>
-  );
+  )
 };
 
 export default App;

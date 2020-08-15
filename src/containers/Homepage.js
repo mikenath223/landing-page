@@ -4,18 +4,19 @@ import headerLogo from '../images/manual-logo-header.svg'
 import styles from '../styles/home.module.css';
 
 const Homepage = () => (
-  <div>
+  <>
     <section className={styles.header}>
-      <img src={headerLogo} alt="manual-brand-logo" className={styles.headerLogo}/>
+      <img src={headerLogo} alt="manual-brand-logo" className={styles.headerLogo} />
       <div className={styles.headerSideDiv}>
-        <h1 className={styles.beGoodHead}>BE GOOD TO YOURSELF</h1>
+        <h1 className={styles.beGoodHead}>BE GOOD <br /> TO YOURSELF</h1>
         <h3 className={styles.roundTheClock}>We’re working around the clock to bring
-          you a holistic approach to your wellness. From top to bottom, inside and out.
+          you a  <br />  holistic approach to your wellness. From top to <br /> bottom, inside and out.
         </h3>
         <button className={styles.ctaHeader}>TAKE THE QUIZ</button>
       </div>
       <div className={styles.headerImageSmallSceen}></div>
     </section>
+
     <section className={styles.midSectionHair}>
       <h3>What we can help with</h3>
       <div className={styles.hairloss}>
@@ -47,14 +48,14 @@ const Homepage = () => (
           <h1 className={styles.midSectionNumberTwo}>02</h1>
           <h4>Erectile Dysfunction</h4>
           <p>Erections can be a tricky thing.
-But no need to feel down!</p>
+            But no need to feel down!</p>
           <p>There are plenty of reasons why you might be
-  having difficulty in the erection department. We can help you figure out possible reasons why. And prescribe a pill if needed.</p>
+            having difficulty in the erection department. We can help you figure out possible reasons why. And prescribe a pill if needed.</p>
         </article>
       </div>
     </section>
     <Footer />
-  </div>
+  </>
 );
 
 export default Homepage;
