@@ -1,8 +1,6 @@
 import React from 'react';
 
-const Result = ({ isSurveyFinished, giveTreatment }) => {
-
-return(
+const Result = ({ isSurveyFinished, giveTreatment }) => (
   <>
     <li className={!(isSurveyFinished) ? 'hide-elem' : giveTreatment ? 'show-elem' : 'hide-elem'}>
       Unfortunately, we are unable to prescribe this medication for you. This is because
@@ -12,10 +10,13 @@ return(
     </li>
     <li className={!(isSurveyFinished) ? 'hide-elem' : giveTreatment ? 'hide-elem' : 'show-elem'}>
       Great news! We have the perfect treatment for your hair loss. Proceed
-      to <a href="www.manual.co" rel="noopener noreferrer">www.manual.co</a>,
+      to
+      {' '}
+      <a href="www.manual.co" rel="noopener noreferrer">www.manual.co</a>
+      ,
       and prepare to say hello to your new hair!
     </li>
   </>
-)}
+);
 
 export default Result;

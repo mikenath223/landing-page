@@ -12,25 +12,24 @@ const Queries = ({ surveyApiData }) => {
 
   const queryAmount = surveyApiData.length;
 
-  const handleClick = (event) => {
+  const handleClick = event => {
     setDisplayQuestion(state => state + 1);
 
     if (event.target.textContent === 'Yes') {
-      setGiveTreatment(true)
+      setGiveTreatment(true);
     }
 
     const surveyFinished = `${displayQuestion}` === `${queryAmount}`;
     if (surveyFinished) {
       setIsSurveyFinished(true);
     }
-  }
-
+  };
 
   return (
     <ul className={styles.queryWrap}>
       {
-        surveyApiData.map((dataObj, i) => {
-          return (<li key={uuidv4()}>
+        surveyApiData.map((dataObj, i) => (
+          <li key={uuidv4()}>
             <Question
               dataObj={dataObj}
               queryNum={i + 1}
@@ -39,8 +38,7 @@ const Queries = ({ surveyApiData }) => {
               handleClick={handleClick}
             />
           </li>
-          )
-        })
+        ))
       }
       <Result
         isSurveyFinished={isSurveyFinished}
@@ -48,10 +46,10 @@ const Queries = ({ surveyApiData }) => {
       />
     </ul>
   );
-}
+};
 
 Queries.propTypes = {
-  surveyApiData: PropTypes.arrayOf(PropTypes.object).isRequired
-}
+  surveyApiData: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default Queries;
