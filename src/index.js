@@ -4,7 +4,8 @@ import { Provider } from 'react-redux';
 import store from './lib/store';
 import ErrorBoundary from './containers/ErrorBoundary';
 import App from './containers/App';
-import './index.css';
+import './styles/index.css';
+import './styles/reset.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
