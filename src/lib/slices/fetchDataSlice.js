@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const fetchDataSlice = createSlice({
   name: 'queryapi',
   initialState: {
-    questions: {},
+    questions: [],
   },
   reducers: {
     loadData: (state, action) => {
@@ -11,7 +11,7 @@ export const fetchDataSlice = createSlice({
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      // state.questions = action.payload
+      state.questions = action.payload
     }
   },
 });
@@ -27,7 +27,6 @@ export const { loadData } = fetchDataSlice.actions;
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state) => state.counter.value)`
 export const selectApiData = state => state.queryapi.questions;
-console.log(selectApiData);
 
 
 export default fetchDataSlice.reducer;
