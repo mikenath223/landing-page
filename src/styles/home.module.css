@@ -1,22 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+:root {
+  --tealish: #34d1d1;
+}
+
 .header {
   height: 680px;
   width: 100%;
   background-image: url('../images/hair-cat-header/hair-cat-header.jpg');
   background-size: contain;
+  background-position: right bottom;
   background-color: #B8E6E3;
   background-repeat: no-repeat;
   padding-left: 80px;
 }
 
 .headerLogo {
+  margin-top: 30px;
   max-width: 40px;
   height: auto;
 }
 
 .beGoodHead {
-  height: 200px;
-  margin-top: 172px;
+  height: 170px;
+  margin-top: 90px;
   font-family: 'Montserrat', sans-serif;
   font-size: 82px;
   font-weight: bold;
@@ -28,15 +34,93 @@
 }
 
 .roundTheClock {
-  margin-top: 22px;
+  font-family: Helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  margin-left: 10px;
+  color: #0c3c3d;
 }
 
-@media (max-width: 768px) {
+.ctaHeader {
+  width: 200px;
+  height: 48px;
+  border-radius: 49.5px;
+  box-shadow: 0 10px 30px -20px rgba(0, 0, 0, 0.5);
+  background-color: var(--tealish);
+  border: none;
+  margin: 38px 0 0 14px;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    height: 610px;
+    background-size: 95%;
+  }
   .beGoodHead {
-  font-size: 40px;    
+    height: 150px;
+    font-size: 70px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
+  .header {
+    padding-left: 60px;
+    height: 500px;
+    background-size: 90%;
+  }
+  .beGoodHead {
+    height: auto;
+    margin-top: 50px;
+    font-size: 55px;
+  }
+  .roundTheClock {
+    font-size: 18px;
+  }
+  .ctaHeader {
+    font-size: 11px;
+    width: 150px;
+    height: 40px;
+    margin-top: 30px;
+  }
+}
 
+@media (max-width: 560px) {
+  .header {
+    padding-left: 45px;
+  }
+  .beGoodHead {
+    font-size: 45px;
+  }
+  .roundTheClock {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    padding-left: 30px;
+    height: 400px;
+  }
+  .beGoodHead {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+  .roundTheClock {
+    font-size: 13px;
+  }
+  .ctaHeader {
+    font-size: 9px;
+    width: 130px;
+  }
 }
