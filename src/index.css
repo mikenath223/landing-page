@@ -6,3 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.hide-elem, 
+.hide-by-default {
+  display: none;
+}
+
+.show-elem {
+  display: initial;
+}
