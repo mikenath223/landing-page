@@ -19,6 +19,9 @@ firebase.initializeApp(firebaseConfig);
 
 export const getQuestions = async () => {
   const snapshot = await firebase.database().ref('/questions/').once('value');
-  const retrievedData = (snapshot.val()) || '';
+  const retrievedData = snapshot.val() || '';
+  if (!retrievedData) {
+    throw Error('There is an issue fetching from the database');
+  }
   return retrievedData;
 }
