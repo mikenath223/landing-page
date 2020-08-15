@@ -3,31 +3,39 @@ import ReactHtmlParser from 'react-html-parser';
 import styles from '../styles/Question.module.css';
 
 
-const Question = ({ dataObj, queryNum, queryLength, showElem, handleClick }) => {
+const Question = ({ dataObj, queryNum, queryAmount, displayQuestion, handleClick }) => {
   const { options } = dataObj;
 
   return (
-    <div>
+    <div className={(displayQuestion === queryNum) ? "show-elem" : "hide-elem"}>
       <div>
-        <h3>{queryNum} of {queryLength}</h3>
+        <h3>{queryNum} of {queryAmount}</h3>
         <h1>{dataObj.question}</h1>
       </div>
       <ul>
         {
           options.map((el, i) => {
-            const retrievedKeys = Object.keys(el)[0];
-            let html = el[retrievedKeys] !== true ? el[retrievedKeys] : '';
+            const retrievedObjKeys = Object.keys(el)[0];
+            const retrievedObjValues = el[retrievedObjKeys];
 
-            return (<li onClick={handleClick} tabIndex={(i + 1) * queryNum}
-              key={retrievedKeys + i}
-              className={showElem ? "show-elem" : "hide-elem"}>
-              {ReactHtmlParser(html)}
-              {retrievedKeys}
-            </li>)
+            let html = retrievedObjValues !== true ? retrievedObjValues : '';
+            const data = dataObj.question;
+            
+            const answers = {}
+            answers[data] = retrievedObjKeys.startsWith('<') ? retrievedObjValues : retrievedObjKeys;
+            return (
+              <li
+                onClick={(event) => handleClick(event, answers)}
+                tabIndex={(i + 1) * queryNum}
+                key={retrievedObjKeys + i}>
+                {ReactHtmlParser(html)}
+                {retrievedObjKeys}
+              </li>
+            )
           })
         }
       </ul>
-      {console.log(dataObj)}
+      {/* {console.log(dataObj)} */}
     </div>
   )
 }
