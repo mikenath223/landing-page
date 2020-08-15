@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Query from './Query';
+import HomePage from './Homepage';
+import Query from './Queries';
 import { getQuestions } from '../lib/firebase'
 import {
   loadData,
@@ -12,7 +13,7 @@ const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(false)
 
-  const queryApiData = useSelector(selectApiData);
+  const surveyApiData = useSelector(selectApiData);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -26,10 +27,14 @@ const App = () => {
     )
   }
 
+  if (isLoaded) {
+    <Homepage />
+  }
+
   return (
     <div className="App">
       <Query
-        queryApiData={queryApiData}
+        surveyApiData={surveyApiData}
       />
       {console.log(queryApiData)}
     </div>
