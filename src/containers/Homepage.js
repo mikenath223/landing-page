@@ -18,41 +18,34 @@ const Homepage = () => (
     </section>
 
     <section className={styles.midSectionHair}>
-      <h3>What we can help with</h3>
-      <div className={styles.hairloss}>
-        <div className={styles.hairlossImage}>
-          <img src={require('../images/hair-photo/hair-photo-1-2-x.png')}
-            srcset={`${require('../images/hair-photo/hair-photo-1-2-x@2x.png')} 2x, 
+      <div className={styles.canHelp}>
+        <h3>What we can help with</h3>
+      </div>
+      <div className={`${styles.hairloss} ${styles.midSectionElems}`}>
+        <img src={require('../images/hair-photo/hair-photo-1-2-x.png')}
+          srcset={`${require('../images/hair-photo/hair-photo-1-2-x@2x.png')} 2x, 
               ${require('../images/hair-photo/hair-photo-1-2-x@3x.png')} 3x`}
-            className={styles.hairPhoto} alt="hair loss issue" />
-        </div>
-        <article>
-          <h1 className={styles.midSectionNumberOne}>01</h1>
-          <h4>HAIR LOSS</h4>
-          <p>Hair loss needn’t be irreversible. We can help!</p>
-          <p>Hair loss needn’t be irreversible. There’s a scientifically proven way that’s most effective in keeping and regrowing your hair. It’s all to do with blocking a pesky hormone called DHT. That’s the bad guy behind hair loss. And you can keep him at bay. The choice is yours.</p>
+          className={styles.healthPhotos} alt="Hair loss issue" />
+        <article className={`${styles.hairlossSect} ${styles.midSectArticles}`}>
+          <h2 className={styles.midSectBold}>HAIR LOSS</h2>
+          <p className={styles.midSectParaOne}>Hair loss needn’t be  <br /> irreversible. We can help!</p>
+          <p className={styles.midSectParaTwo}>Hair loss needn’t be irreversible. There’s a scientifically proven way that’s most effective in keeping and regrowing your hair. It’s all to do with blocking a pesky hormone called DHT. That’s the bad guy behind hair loss. And you can keep him at bay. The choice is yours.</p>
         </article>
       </div>
     </section>
 
-    <section className={styles.midSectionSex}>
-      <div className={styles.disfunction}>
-        <div className={styles.hairlossImage}>
-          <img src={require('../images/sex-issue-photo/sex-photo-1-2-x.jpg')}
-            srcset={`${require('../images/sex-issue-photo/sex-photo-1-2-x@2x.jpg')} 2x, 
+    <section className={`${styles.midSectionSexx} ${styles.midSectionElems}`}>
+      <img src={require('../images/sex-issue-photo/sex-photo-1-2-x.jpg')}
+        srcset={`${require('../images/sex-issue-photo/sex-photo-1-2-x@2x.jpg')} 2x, 
               ${require('../images/sex-issue-photo/sex-photo-1-2-x@3x.jpg')} 3x`}
-            alt="Erectile dysfunction"
-            class="sex-photo-12x" />
-        </div>
-        <article>
-          <h1 className={styles.midSectionNumberTwo}>02</h1>
-          <h4>Erectile Dysfunction</h4>
-          <p>Erections can be a tricky thing.
-            But no need to feel down!</p>
-          <p>There are plenty of reasons why you might be
+        alt="Erectile dysfunction"
+        className={styles.healthPhotos} />
+      <article className={`${styles.midSectArticles} ${styles.erectileArticle}`}>
+        <h2 className={styles.midSectBold}>ERECTILE DYSFUNCTION</h2>
+        <p className={styles.midSectParaOne}>Erections can be a tricky thing. <br /> But no need to feel down!</p>
+        <p className={styles.midSectParaTwo}>There are plenty of reasons why you might be
             having difficulty in the erection department. We can help you figure out possible reasons why. And prescribe a pill if needed.</p>
-        </article>
-      </div>
+      </article>
     </section>
     <Footer />
   </>
