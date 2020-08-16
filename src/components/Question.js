@@ -10,7 +10,7 @@ const Question = ({
   return (
     <div className={(displayQuestion === queryNum) ? 'show-elem' : 'hide-elem'}>
       <div className={styles.questionInfo}>
-        <h3 aria-labelledby="Quantity of items shown and how many more left">
+        <h3 aria-labelledby="Quantity of items shown and how many more to be shown">
           {queryNum}
           {' '}
           of
