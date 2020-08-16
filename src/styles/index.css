@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
 body {
   margin: 0;
   font-family: Montserrat, sans-serif;
@@ -7,7 +6,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.hide-elem, .hide-by-default {
+.hide-elem {
   display: none;
 }
 
@@ -15,7 +14,29 @@ body {
   display: initial;
 }
 
+.queryWrap {
+  width: 700px;
+  margin: 50px auto;
+}
+
 ul li {
   list-style: none;
   cursor: pointer;
+}
+
+.result-text {
+  padding: 10px;
+}
+
+@media (max-width: 800px) {
+  .queryWrap {
+    width: 400px;
+  }
+}
+
+@media (max-width: 560px) {
+  .queryWrap {
+    width: auto;
+    padding: 0 10px;
+  }
 }
