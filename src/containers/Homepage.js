@@ -23,7 +23,7 @@ const Homepage = () => (
       </div>
       <div className={`${styles.hairloss} ${styles.midSectionElems}`}>
         <img src={require('../images/hair-photo/hair-photo-1-2-x.png')}
-          srcset={`${require('../images/hair-photo/hair-photo-1-2-x@2x.png')} 2x, 
+          srcSet={`${require('../images/hair-photo/hair-photo-1-2-x@2x.png')} 2x, 
               ${require('../images/hair-photo/hair-photo-1-2-x@3x.png')} 3x`}
           className={styles.healthPhotos} alt="Hair loss issue" />
         <article className={`${styles.hairlossSect} ${styles.midSectArticles}`}>
@@ -36,7 +36,7 @@ const Homepage = () => (
 
     <section className={`${styles.midSectionSexx} ${styles.midSectionElems}`}>
       <img src={require('../images/sex-issue-photo/sex-photo-1-2-x.jpg')}
-        srcset={`${require('../images/sex-issue-photo/sex-photo-1-2-x@2x.jpg')} 2x, 
+        srcSet={`${require('../images/sex-issue-photo/sex-photo-1-2-x@2x.jpg')} 2x, 
               ${require('../images/sex-issue-photo/sex-photo-1-2-x@3x.jpg')} 3x`}
         alt="Erectile dysfunction"
         className={styles.healthPhotos} />
