@@ -18,12 +18,12 @@ class ErrorBoundary extends Component {
       return <h1>We are sorry. Something went wrong.</h1>;
     }
 
-    return children
+    return children;
   }
 }
 
 export default ErrorBoundary;
 
 ErrorBoundary.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.objectOf(PropTypes.any).isRequired,
 };
