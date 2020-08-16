@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hide-elem {
+  display: none;
+}
+
+.show-elem {
+  display: initial;
+}
+
+.queryWrap {
+  width: 700px;
+  margin: 50px auto;
+}
+
+ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.result-text {
+  margin: 10px;
+}
+
+@media (max-width: 800px) {
+  .queryWrap {
+    width: 500px;
+  }
+}
+
+@media (max-width: 560px) {
+  .queryWrap {
+    width: auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 321px) {
+  .queryWrap {
+    padding: 7px;
+  }
+}
