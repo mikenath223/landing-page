@@ -17,4 +17,5 @@ body {
 
 ul li {
   list-style: none;
+  cursor: pointer;
 }
