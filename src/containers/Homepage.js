@@ -6,15 +6,14 @@ import styles from '../styles/home.module.css';
 const Homepage = () => (
   <>
     <section className={styles.header}>
-      <img src={headerLogo} alt="manual-brand-logo" className={styles.headerLogo} />
+      <img src={headerLogo} tabIndex="1" alt="manual-brand-logo" className={styles.headerLogo} />
       <div className={styles.headerSideDiv}>
         <h1 className={styles.beGoodHead}>BE GOOD <br /> TO YOURSELF</h1>
         <h3 className={styles.roundTheClock}>We’re working around the clock to bring
           you a  <br />  holistic approach to your wellness. From top to <br /> bottom, inside and out.
         </h3>
-        <button className={styles.ctaHeader}>TAKE THE QUIZ</button>
+        <button className={styles.ctaHeader} type="button" tabIndex="1">TAKE THE QUIZ</button>
       </div>
-      <div className={styles.headerImageSmallSceen}></div>
     </section>
 
     <section className={styles.midSectionHair}>

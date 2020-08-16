@@ -9,8 +9,8 @@ const Question = ({
 
   return (
     <div className={(displayQuestion === queryNum) ? 'show-elem' : 'hide-elem'}>
-      <div>
-        <h3>
+      <div className={styles.questionInfo}>
+        <h3 aria-labelledby="Quantity of items shown and how many more left">
           {queryNum}
           {' '}
           of
@@ -19,31 +19,28 @@ const Question = ({
         </h3>
         <h1>{dataObj.question}</h1>
       </div>
-      <ul>
+      <ul className={styles.questionOptions}>
         {
           options.map((el, i) => {
             const retrievedObjKeys = Object.keys(el)[0];
             const retrievedObjValues = el[retrievedObjKeys];
 
             const html = retrievedObjValues !== true ? retrievedObjValues : '';
-            const data = dataObj.question;
 
-            const answers = {};
-            answers[data] = retrievedObjKeys.startsWith('<') ? retrievedObjValues : retrievedObjKeys;
             return (
               <li
-                onClick={event => handleClick(event, answers)}
+                className={styles.eachOption}
+                onClick={handleClick}
                 tabIndex={(i + 1) * queryNum}
                 key={retrievedObjKeys + i}
               >
                 {ReactHtmlParser(html)}
-                {retrievedObjKeys}
+                <button type="submit" className={styles.questionButton}>{retrievedObjKeys}</button>
               </li>
             );
           })
         }
       </ul>
-      {/* {console.log(dataObj)} */}
     </div>
   );
 };

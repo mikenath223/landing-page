@@ -31,11 +31,11 @@ const App = () => {
     );
   }
 
-  // if (!isLoaded) {
-  return (
-    <Homepage />
-  )
-  // }
+  if (!isLoaded) {
+    return (
+      <Homepage />
+    )
+  }
 
   return (
     <div className="App">

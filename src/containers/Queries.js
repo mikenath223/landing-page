@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import Question from '../components/Question';
 import Result from '../components/Result';
-import styles from '../styles/Query.module.css';
 
 const Queries = ({ surveyApiData }) => {
   const [displayQuestion, setDisplayQuestion] = useState(1);
@@ -26,25 +25,24 @@ const Queries = ({ surveyApiData }) => {
   };
 
   return (
-    <ul className={styles.queryWrap}>
+    <div className="queryWrap">
       {
         surveyApiData.map((dataObj, i) => (
-          <li key={uuidv4()}>
             <Question
+            key={uuidv4()}
               dataObj={dataObj}
               queryNum={i + 1}
               queryAmount={queryAmount}
               displayQuestion={displayQuestion}
               handleClick={handleClick}
             />
-          </li>
         ))
       }
       <Result
         isSurveyFinished={isSurveyFinished}
         giveTreatment={giveTreatment}
       />
-    </ul>
+    </div>
   );
 };
 
