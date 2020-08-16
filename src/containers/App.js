@@ -34,7 +34,7 @@ const App = () => {
   if (!isLoaded) {
     return (
       <Homepage />
-    )
+    );
   }
 
   return (
@@ -43,7 +43,7 @@ const App = () => {
         surveyApiData={surveyApiData}
       />
     </div>
-  )
+  );
 };
 
 export default App;

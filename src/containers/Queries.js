@@ -28,14 +28,14 @@ const Queries = ({ surveyApiData }) => {
     <div className="queryWrap">
       {
         surveyApiData.map((dataObj, i) => (
-            <Question
+          <Question
             key={uuidv4()}
-              dataObj={dataObj}
-              queryNum={i + 1}
-              queryAmount={queryAmount}
-              displayQuestion={displayQuestion}
-              handleClick={handleClick}
-            />
+            dataObj={dataObj}
+            queryNum={i + 1}
+            queryAmount={queryAmount}
+            displayQuestion={displayQuestion}
+            handleClick={handleClick}
+          />
         ))
       }
       <Result

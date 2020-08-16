@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from '../styles/footer.module.css';
 import footerLogo from '../images/manual-logo-footer.svg';
+import facebookImg from '../images/facebook.svg';
+import twitterImg from '../images/twitter.svg';
+import linkedInImg from '../images/linkedin.svg';
 
 const Footer = () => (
   <footer className={styles.footer}>
@@ -9,36 +12,36 @@ const Footer = () => (
         <img src={footerLogo} alt="manual-brand-logo" className={styles.brandLogo} />
       </div>
       <ul className={styles.footerGroupLinks}>
-        <li tabIndex="3">PRODUCT</li>
-        <li tabIndex="4">Popular</li>
-        <li tabIndex="5">Trending</li>
-        <li tabIndex="6">Guided</li>
-        <li tabIndex="7">Products</li>
+        <li>PRODUCT</li>
+        <li>Popular</li>
+        <li>Trending</li>
+        <li>Guided</li>
+        <li>Products</li>
       </ul>
       <ul className={styles.footerGroupLinks}>
-        <li tabIndex="8">COMPANY</li>
-        <li tabIndex="9">Press Releases</li>
-        <li tabIndex="10">Mission</li>
-        <li tabIndex="11">Strategy</li>
-        <li tabIndex="12">About</li>
+        <li>COMPANY</li>
+        <li>Press Releases</li>
+        <li>Mission</li>
+        <li>Strategy</li>
+        <li>About</li>
       </ul>
       <ul className={styles.footerGroupLinks}>
-        <li tabIndex="13">INFO</li>
-        <li tabIndex="14">Support</li>
-        <li tabIndex="15">Customer Service</li>
-        <li tabIndex="16">Get Started Guide</li>
+        <li>INFO</li>
+        <li>Support</li>
+        <li>Customer Service</li>
+        <li>Get Started Guide</li>
       </ul>
       <ul className={styles.footerGroupLinks}>
-        <li tabIndex="17">FOLLOW US</li>
+        <li>FOLLOW US</li>
         <li className={styles.socialLinks}>
-          <img tabIndex="18" src={require('../images/facebook.svg')} alt="..." />
-          <img tabIndex="19" src={require('../images/twitter.svg')} alt="..." />
-          <img tabIndex="20" src={require('../images/linkedin.svg')} alt="..." />
+          <img src={facebookImg} alt="..." />
+          <img src={twitterImg} alt="..." />
+          <img src={linkedInImg} alt="..." />
         </li>
       </ul>
     </div>
     <div className={styles.bottomBar}>
-      <hr/>
+      <hr />
       <small className={styles.copyright}>&copy; 2019 Manual. All rights reserved.</small>
     </div>
   </footer>

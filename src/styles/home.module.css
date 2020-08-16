@@ -9,11 +9,13 @@
   background-image: url('../images/hair-cat-header/hair-cat-header.jpg');
   background-position: right bottom;
   background-size: contain;
-  background-color: #B8E6E3;
+  background-color: #b8e6e3;
   padding-left: 80px;
 }
 
-.header, .hairloss, .midSectionSexx {
+.header,
+.hairloss,
+.midSectionSexx {
   background-repeat: no-repeat;
 }
 
@@ -75,6 +77,8 @@
 }
 
 .hairloss {
+  background-position: 100% 50%;
+  background-image: url('../images/number1.png');
   max-width: 820px;
 }
 
@@ -92,11 +96,6 @@
   flex-direction: row-reverse;
   max-width: 880px;
   margin-top: 100px;
-}
-
-.hairloss {
-  background-position: 100% 50%;
-  background-image: url('../images/number1.png');
 }
 
 .hairlossSect {
@@ -125,14 +124,14 @@
 }
 
 .midSectParaOne {
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
   font-size: 22px;
   line-height: 1.45;
   color: var(--dark-green);
 }
 
 .midSectParaTwo {
-  font-family: OpenSans;
+  font-family: OpenSans, sans-serif;
   font-size: 14px;
   line-height: 1.73;
   color: var(--dark-green);
@@ -143,16 +142,20 @@
     height: 610px;
     background-size: 95%;
   }
+
   .beGoodHead {
     height: 150px;
     font-size: 70px;
   }
+
   .midSectionElems {
     justify-content: space-around;
   }
+
   .midSectArticles {
     padding-top: 100px;
   }
+
   .healthPhotos {
     max-width: 350px;
     height: auto;
@@ -165,36 +168,44 @@
     height: 500px;
     background-size: 90%;
   }
+
   .beGoodHead {
     height: auto;
     margin-top: 50px;
     font-size: 55px;
   }
+
   .roundTheClock {
     font-size: 18px;
   }
+
   .ctaHeader {
     font-size: 11px;
     width: 150px;
     height: 40px;
     margin-top: 30px;
   }
+
   .midSectionElems {
     width: auto;
     flex-direction: column-reverse;
     align-items: center;
   }
+
   .hairloss {
     background-position: 80% 35%;
   }
+
   .midSectArticles {
     height: 240px;
     padding-top: 10px;
     width: 50%;
   }
+
   .midSectionSexx {
     background-position: 30% 20%;
   }
+
   .erectileArticle {
     height: 200px;
     margin-bottom: 40px;
@@ -205,32 +216,41 @@
   .header {
     padding-left: 45px;
   }
+
   .beGoodHead {
     font-size: 45px;
   }
+
   .roundTheClock {
     font-size: 16px;
   }
+
   .canHelp {
     height: 120px;
   }
+
   .canHelp h3 {
     font-size: 26px;
   }
+
   .midSectionSexx {
     margin-top: 80px;
   }
+
   .hairlossSect {
     margin-bottom: 40px;
   }
+
   .midSectArticles {
     height: auto;
     width: 70%;
     margin-bottom: 20px;
   }
-  .midSectArticles>* {
+
+  .midSectArticles > * {
     margin-bottom: 10px;
   }
+
   .healthPhotos {
     max-width: 300px;
   }
@@ -241,30 +261,38 @@
     padding-left: 30px;
     height: 400px;
   }
+
   .beGoodHead {
     font-size: 30px;
     margin-top: 40px;
   }
+
   .roundTheClock {
     font-size: 13px;
   }
+
   .ctaHeader {
     font-size: 9px;
     width: 130px;
   }
+
   .canHelp h3 {
     font-size: 20px;
   }
+
   .healthPhotos {
     max-width: 250px;
   }
+
   .hairloss {
     background-position-y: 45%;
   }
+
   .midSectArticles {
     width: 100%;
-    padding: 0px 40px;
+    padding: 0 40px;
   }
+
   .midSectionSexx {
     margin-top: 60px;
     background-position: 30% 60%;
