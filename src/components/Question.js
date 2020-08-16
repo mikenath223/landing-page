@@ -52,7 +52,7 @@ export default Question;
 Question.propTypes = {
   dataObj: PropTypes.shape({
     question: PropTypes.string,
-    // options: PropTypes.objectOf(PropTypes.any),
+    options: PropTypes.arrayOf(PropTypes.any),
   }).isRequired,
   queryNum: PropTypes.number.isRequired,
   queryAmount: PropTypes.number.isRequired,
