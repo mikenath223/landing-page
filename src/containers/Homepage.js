@@ -6,9 +6,10 @@ import hairPhotoReg from '../images/hair-photo/hair-photo-1-2-x.png';
 import sexIssueReg from '../images/sex-issue-photo/sex-photo-1-2-x.jpg';
 import styles from '../styles/home.module.css';
 
+
 const Homepage = ({ handleClick }) => (
-  <header role="banner">
-    <section className={styles.header}>
+  <>
+    <header role="banner" className={styles.header}>
       <img src={headerLogo} alt="manual-brand-logo" className={styles.headerLogo} />
       <div className={styles.headerSideDiv}>
         <h1 className={styles.beGoodHead}>
@@ -17,7 +18,7 @@ const Homepage = ({ handleClick }) => (
           {' '}
           TO YOURSELF
         </h1>
-        <h3 className={styles.roundTheClock}>
+        <h2 className={styles.roundTheClock}>
           We’re working around the clock to bring
           you a
           <br />
@@ -26,12 +27,13 @@ const Homepage = ({ handleClick }) => (
           <br />
           {' '}
           bottom, inside and out.
-        </h3>
+        </h2>
         <button className={styles.ctaHeader} onClick={handleClick} type="button" data-testid="take-quiz">TAKE THE QUIZ</button>
       </div>
-    </section>
+    </header>
 
-    <main className={styles.midSectionHair}>
+    <main role="main">
+    <section className={styles.midSectionHair}>
       <div className={styles.canHelp}>
         <h3>What we can help with</h3>
       </div>
@@ -59,7 +61,7 @@ const Homepage = ({ handleClick }) => (
           </p>
         </article>
       </div>
-    </main>
+    </section>
 
     <section className={`${styles.midSectionSexx} ${styles.midSectionElems}`}>
       <img
@@ -83,8 +85,10 @@ const Homepage = ({ handleClick }) => (
         </p>
       </article>
     </section>
+    </main>
+
     <Footer />
-  </header>
+    </>
 );
 
 export default Homepage;
