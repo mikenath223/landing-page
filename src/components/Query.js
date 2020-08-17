@@ -9,7 +9,7 @@ const Query = ({
 }) => {
   const { options, question, type } = dataObj;
 
-  if (type !== "ChoiceType") return null;
+  if (type !== 'ChoiceType') return null;
 
   return (
     <div className={(displayQuestion === queryNum) ? 'show-elem' : 'hide-elem'}>
@@ -26,9 +26,10 @@ const Query = ({
       <ul className={styles.questionOptions}>
         {
           options.map((el, i) => {
-            let retrievedObjKey = Object.keys(el)[0];
+            const retrievedObjKey = Object.keys(el)[0];
             const retrievedObjValue = el[retrievedObjKey];
-            const html = retrievedObjValue === false ? 'false' : retrievedObjValue;
+            const html = retrievedObjValue === false ? 'false'
+              : retrievedObjValue;
 
             return (
               <button
@@ -38,10 +39,12 @@ const Query = ({
                 onClick={handleClick}
                 tabIndex={(i + 1) * queryNum}
               >
-                {(html !== true && html !== 'false') ? 
-                ReactHtmlParser(html) : ''}
-                <li className={styles.questionButton}>{(html !== true && html !== 'false') ?
-                 retrievedObjKey : ReactHtmlParser(html)}</li>
+                {(html !== true && html !== 'false')
+                  ? ReactHtmlParser(html) : ''}
+                <li className={styles.questionButton}>
+                  {(html !== true && html !== 'false')
+                    ? retrievedObjKey : ReactHtmlParser(html)}
+                </li>
               </button>
             );
           })
@@ -57,6 +60,7 @@ Query.propTypes = {
   dataObj: PropTypes.shape({
     question: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.any),
+    type: PropTypes.string,
   }).isRequired,
   queryNum: PropTypes.number.isRequired,
   queryAmount: PropTypes.number.isRequired,

@@ -3,17 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 export const giveTreatmentSlice = createSlice({
   name: 'giveTreatment',
   initialState: {
-    treatment: { value: 'treat', check: false }
+    treatment: { value: 'treat', check: false },
   },
   reducers: {
-    updateTreatment: (state, action) => {
-      return {
-        treatment: {
-          ...state.treatment,
-          ...action.payload
-        }
-      }
-    },
+    updateTreatment: (state, action) => ({
+      treatment: {
+        ...state.treatment,
+        ...action.payload,
+      },
+    }),
   },
 });
 

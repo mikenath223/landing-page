@@ -89,6 +89,10 @@ const Homepage = ({ handleClick }) => (
 
 export default Homepage;
 
+Homepage.defaultProps = {
+  handleClick: () => { },
+};
+
 Homepage.propTypes = {
-  handleClick: PropTypes.func.isRequired
+  handleClick: PropTypes.func,
 };

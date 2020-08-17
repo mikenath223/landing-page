@@ -15,7 +15,11 @@ class ErrorBoundary extends Component {
     const { hasError } = this.state;
     const { children } = this.props;
     if (hasError) {
-      return <h1>We are sorry. Something went wrong.</h1>;
+      return <h1>
+        We are sorry. We encountered an issue
+        processing your last request.
+        Please contact support.
+      </h1>;
     }
 
     return children;

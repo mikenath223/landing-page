@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateTreatment,
-selectTreatment } from '../store/slices/giveTreatmentSlice';
 import { v4 as uuidv4 } from 'uuid';
+import {
+  updateTreatment,
+  selectTreatment,
+} from '../store/slices/giveTreatmentSlice';
 import Query from '../components/Query';
 import Result from '../components/Result';
 
@@ -11,27 +13,27 @@ const Queries = ({ surveyApiData }) => {
   const [displayQuestion, setDisplayQuestion] = useState(1);
 
   const treatment = useSelector(selectTreatment);
-  const setGiveTreatment = useDispatch()
+  const setGiveTreatment = useDispatch();
 
   const queryAmount = surveyApiData.length;
   const handleClick = event => {
     setDisplayQuestion(state => state + 1);
     if (event.target.textContent === 'true') {
       setGiveTreatment(updateTreatment({
-        value: 'dont-treat'
-      }))
+        value: 'dont-treat',
+      }));
     }
     const surveyFinished = displayQuestion === queryAmount;
     if (surveyFinished) {
       setGiveTreatment(updateTreatment({
-        check: true
-      }))
+        check: true,
+      }));
     }
   };
 
   return (
     <div className="queryWrap">
-    <h1>Quiz</h1>
+      <h1>Quiz</h1>
       {
         surveyApiData.map((dataObj, i) => (
           <Query
