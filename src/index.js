@@ -19,6 +19,7 @@ const rendered = () => ReactDOM.render(
   document.getElementById('root'),
 );
 
+// To configure react-axe package for a11y testing on dev mode.
 if (process.env.NODE_ENV !== 'production') {
   import('react-axe').then(axe => {
     axe.default(React, ReactDOM, 1000);
