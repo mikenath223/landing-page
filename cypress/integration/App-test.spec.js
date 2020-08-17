@@ -1,51 +1,28 @@
-describe('e to e test for taking the quiz', () => {
-  it('loads the quiz', () => {
-    cy.visit('/')
+
+beforeEach(() => {
+  cy.visit('/')
+})
+
+
+describe('e to e test to load the quiz', () => {
+  it('it simulates button click and loads the quiz', () => {
     cy.contains(/take the quiz/i)
       .click()
     cy.contains("Quiz")
     cy.contains("Step")
   })
+});
 
-  it('takes the quiz and gets the recieve treatment result', () => {
-    cy.visit('/')
-    cy.contains(/take the quiz/i)
-    .click()
-    // // basic hooks test
-    // cy.contains("Initial State")
-    // cy.contains("State Change Button")
-    //   .click()
-    // cy.contains("Initial State Changed")
-    // cy.contains("Moe")
-    // cy.contains("Change Name")
-    //   .click()
-    // cy.contains("Steve")
-    // //useReducer test
-    // cy.contains('stateprop1 is false')
-    // cy.contains('Dispatch Success')
-    //   .click()
-    // cy.contains('stateprop1 is true')
-    // //useContext test
-    // cy.contains("Some Text")
-    // cy.contains('Change Text')
-    //   .click()
-    // cy.contains("Some Other Text")
-    // //form test
-    // cy.get('#text1')
-    //   .type('New Text {enter}')
-    // cy.contains("Change: New Text")
-    // cy.contains("Submit Value: New Text")
-    // //axios test
-    // cy.request('https://jsonplaceholder.typicode.com/posts/1')
-    //   .should(res => {
-    //       expect(res.body).not.to.be.null
-    //       cy.contains(res.body.title)
-    //     })
-  });
-
-  it('asserts the dom text on page load', () => {
-    cy.visit('/')
+describe('e to e test for landing page structure', () => {
+  it('asserts specific elements exist on landing page load', () => {
     cy.contains(/be good to yourself/i)
-    cy.get('').scrollTo('0%', '25%')
+    cy.contains(/We’re working around the clock/i)
+    cy.contains('HAIR LOSS');
+    cy.contains('ERECTILE DYSFUNCTION');
+    cy.contains('PRODUCT')
+    cy.contains('COMPANY')
+    cy.contains('INFO')
+    cy.contains('FOLLOW US')
+    cy.contains(/2019 Manual/i)
   })
 });

@@ -6,7 +6,7 @@ import Query from './Queries';
 import {
   loadData,
   selectApiData,
-} from '../store/slices/fetchDataSlice';
+} from '../store/slices/queryApiSlice';
 
 const App = () => {
   const [loadSurvey, setLoadSurvey] = useState(false);

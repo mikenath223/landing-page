@@ -9,7 +9,8 @@ const Footer = () => (
   <footer role="contentinfo" className={styles.footer}>
     <div className={styles.footerMenu}>
       <div className={styles.logoWrap}>
-        <img src={footerLogo} alt="manual-brand-logo" className={styles.brandLogo} />
+        <img src={footerLogo} alt="manual-brand-logo" 
+        className={styles.brandLogo} />
       </div>
       <ul className={styles.footerGroupLinks}>
         <li data-testid="product">PRODUCT</li>
