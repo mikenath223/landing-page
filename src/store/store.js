@@ -6,6 +6,6 @@ export default configureStore({
   reducer: {
     // valueInThestore: reducerFromSlice
     queryapi: fetchDataReducer,
-    giveTreatment: giveTreatmentReducer
+    giveTreatment: giveTreatmentReducer,
   },
 });

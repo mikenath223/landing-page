@@ -8,8 +8,6 @@ import './styles/reset.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
-console.log(store.getState(),  'check');
-
 
 ReactDOM.render(
   <React.StrictMode>

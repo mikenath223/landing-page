@@ -20,12 +20,12 @@ const App = () => {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-    }).then(req => req.json()
-    ).then(res => dispatch(loadData(res.questions))
-    ).catch(() => setError(true))
+    }).then(req => req.json()).then(res => dispatch(
+      loadData(res.questions),
+    )).catch(() => setError(true));
   }, [dispatch]);
 
-  const handleClick = () => setLoadSurvey(true)
+  const handleClick = () => setLoadSurvey(true);
 
   if (loadSurvey && error) {
     return (
@@ -34,19 +34,19 @@ const App = () => {
         Please contact support.
       </h2>
     );
-  } else if (loadSurvey && !error) {
+  } if (loadSurvey && !error) {
     return (
       <Query
         surveyApiData={surveyApiData}
       />
-    )
+    );
   }
-
 
   return (
     <div className="App">
       <Homepage
-        handleClick={handleClick} />
+        handleClick={handleClick}
+      />
     </div>
   );
 };
