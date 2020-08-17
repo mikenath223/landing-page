@@ -7,9 +7,7 @@ import styles from '../styles/query.module.css';
 const Query = ({
   dataObj = { options: [], quetion: '', type: '' }, queryNum, queryAmount, displayQuestion, handleClick,
 }) => {
-  const { options, question, type } = dataObj;
-
-  // if (type !== 'ChoiceType') return null;
+  const { options, question } = dataObj;
 
   return (
     <div className={(displayQuestion === queryNum) ? 'show-elem' : 'hide-elem'}>

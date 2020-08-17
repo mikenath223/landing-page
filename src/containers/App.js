@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import 'whatwg-fetch'
+import 'whatwg-fetch';
 import Homepage from './Homepage';
 import Query from './Queries';
 import {
