@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Footer from '../components/Footer';
 import headerLogo from '../images/manual-logo-header.svg';
 import hairPhotoReg from '../images/hair-photo/hair-photo-1-2-x.png';
 import sexIssueReg from '../images/sex-issue-photo/sex-photo-1-2-x.jpg';
 import styles from '../styles/home.module.css';
 
-const Homepage = () => (
+const Homepage = ({ handleClick }) => (
   <>
     <section className={styles.header}>
       <img src={headerLogo} alt="manual-brand-logo" className={styles.headerLogo} />
@@ -26,7 +27,7 @@ const Homepage = () => (
           {' '}
           bottom, inside and out.
         </h3>
-        <button className={styles.ctaHeader} type="button">TAKE THE QUIZ</button>
+        <button className={styles.ctaHeader} onClick={handleClick} type="button" data-testid="take-quiz">TAKE THE QUIZ</button>
       </div>
     </section>
 
@@ -38,6 +39,7 @@ const Homepage = () => (
         <img
           src={hairPhotoReg}
           alt="Hair loss issue"
+          className={styles.healthPhotos}
         />
         <article className={`${styles.hairlossSect} ${styles.midSectArticles}`}>
           <h2 className={styles.midSectBold}>HAIR LOSS</h2>
@@ -86,3 +88,7 @@ const Homepage = () => (
 );
 
 export default Homepage;
+
+Homepage.propTypes = {
+  handleClick: PropTypes.func.isRequired
+};

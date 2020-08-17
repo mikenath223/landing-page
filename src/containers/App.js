@@ -2,46 +2,51 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Homepage from './Homepage';
 import Query from './Queries';
-import getQuestions from '../lib/firebase';
 import {
   loadData,
   selectApiData,
-} from '../lib/slices/fetchDataSlice';
+} from '../store/slices/fetchDataSlice';
 
 const App = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [loadSurvey, setLoadSurvey] = useState(false);
   const [error, setError] = useState(false);
 
   const surveyApiData = useSelector(selectApiData);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    getQuestions().then(res => {
-      dispatch(loadData(res));
-      setIsLoaded(true);
-    }).catch(() => setError(true));
+    fetch('questionnaire.json', {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    }).then(req => req.json()
+    ).then(res => dispatch(loadData(res.questions))
+    ).catch(() => setError(true))
   }, [dispatch]);
 
-  if (error) {
+  const handleClick = () => setLoadSurvey(true)
+
+  if (loadSurvey && error) {
     return (
       <h2>
-        We are sorry but there has been an issue fetching your survey.
+        We are sorry but there has been an issue fetching your treatment questionnaire.
         Please contact support.
       </h2>
     );
-  }
-
-  if (!isLoaded) {
+  } else if (loadSurvey && !error) {
     return (
-      <Homepage />
-    );
-  }
-
-  return (
-    <div className="App">
       <Query
         surveyApiData={surveyApiData}
       />
+    )
+  }
+
+
+  return (
+    <div className="App">
+      <Homepage
+        handleClick={handleClick} />
     </div>
   );
 };
