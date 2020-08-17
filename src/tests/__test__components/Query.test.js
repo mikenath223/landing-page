@@ -1,7 +1,6 @@
 import React from 'react';
 import { cleanup } from '@testing-library/react';
 import reduxRendering from '../__test__containers/App.test';
-import '@testing-library/jest-dom/extend-expect';
 import Query from '../../components/Query';
 
 afterEach(cleanup);
