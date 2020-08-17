@@ -18,7 +18,7 @@ test('renders App component with redux without crashing', () => {
   reduxRendering(<App />);
 });
 
-test('contains the TAKE QUIZ button', () => {
+test('landing page contains the TAKE QUIZ button', () => {
   const { getByTestId } = reduxRendering(<App />);
   expect(getByTestId('take-quiz')).toBeInTheDocument();
 });

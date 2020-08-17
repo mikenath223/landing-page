@@ -7,7 +7,7 @@ import sexIssueReg from '../images/sex-issue-photo/sex-photo-1-2-x.jpg';
 import styles from '../styles/home.module.css';
 
 const Homepage = ({ handleClick }) => (
-  <>
+  <header role="banner">
     <section className={styles.header}>
       <img src={headerLogo} alt="manual-brand-logo" className={styles.headerLogo} />
       <div className={styles.headerSideDiv}>
@@ -31,7 +31,7 @@ const Homepage = ({ handleClick }) => (
       </div>
     </section>
 
-    <section className={styles.midSectionHair}>
+    <main className={styles.midSectionHair}>
       <div className={styles.canHelp}>
         <h3>What we can help with</h3>
       </div>
@@ -59,7 +59,7 @@ const Homepage = ({ handleClick }) => (
           </p>
         </article>
       </div>
-    </section>
+    </main>
 
     <section className={`${styles.midSectionSexx} ${styles.midSectionElems}`}>
       <img
@@ -84,7 +84,7 @@ const Homepage = ({ handleClick }) => (
       </article>
     </section>
     <Footer />
-  </>
+  </header>
 );
 
 export default Homepage;

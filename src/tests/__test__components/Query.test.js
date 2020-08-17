@@ -6,9 +6,9 @@ import Query from '../../components/Query';
 
 afterEach(cleanup);
 const mockInput = {
-  question: "Which image matches your hairloss",
-  options: [{ "Yes": true }, { "No": false }]
-}
+  question: 'Which image matches your hairloss',
+  options: [{ Yes: true }, { No: false }],
+};
 
 it('renders Query without crashing', () => {
   reduxRendering(
@@ -20,9 +20,11 @@ test('it renders right text on render', () => {
   const { getByText, getByTestId } = reduxRendering(
     <Query
       dataObj={mockInput}
-    />);
+    />,
+  );
   expect(getByTestId('question')).toHaveTextContent(
-    'Which image matches your hairloss');
+    'Which image matches your hairloss',
+  );
   expect(getByText('false')).toBeInTheDocument();
   expect(getByText('true')).toBeInTheDocument();
 });

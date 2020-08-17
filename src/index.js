@@ -8,7 +8,7 @@ import './styles/reset.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+const rendered = () => ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <ErrorBoundary>
@@ -18,5 +18,14 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
+
+if (process.env.NODE_ENV !== 'production') {
+  import('react-axe').then(axe => {
+    axe.default(React, ReactDOM, 1000);
+    rendered()
+  });
+} else {
+  rendered()
+}
 
 serviceWorker.unregister();
