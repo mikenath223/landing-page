@@ -6,7 +6,7 @@ import twitterImg from '../images/twitter.svg';
 import linkedInImg from '../images/linkedin.svg';
 
 const Footer = () => (
-  <footer className={styles.footer}>
+  <footer role="contentinfo" className={styles.footer}>
     <div className={styles.footerMenu}>
       <div className={styles.logoWrap}>
         <img src={footerLogo} alt="manual-brand-logo" className={styles.brandLogo} />

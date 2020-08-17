@@ -23,7 +23,7 @@ const Query = ({
         </h3>
         <h2 data-testid="question">{question}</h2>
       </div>
-      <ul className={styles.questionOptions}>
+      <div className={styles.questionOptions}>
         {
           options && options.map((el, i) => {
             const retrievedObjKey = Object.keys(el)[0];
@@ -42,15 +42,15 @@ const Query = ({
                 {(html !== true && html !== 'false')
                   ? ReactHtmlParser(html) : ''}
 
-                <li className={styles.questionButton}>
+                <span className={styles.questionButton}>
                   {(html !== true && html !== 'false')
                     ? retrievedObjKey : ReactHtmlParser(html)}
-                </li>
+                </span>
               </button>
             );
           })
         }
-      </ul>
+      </div>
     </div>
   );
 };
@@ -58,7 +58,7 @@ const Query = ({
 export default Query;
 
 Query.defaultProps = {
-  dataObj: {},
+  dataObj: { },
   queryNum: 0,
   queryAmount: 0,
   displayQuestion: 0,
