@@ -35,6 +35,7 @@ const Query = ({
               <button
                 key={uuidv4()}
                 type="submit"
+                
                 className={styles.eachOption}
                 onClick={handleClick}
                 tabIndex={(i + 1) * queryNum}
