@@ -10,6 +10,7 @@ const Child = () => {
 };
 
 test('it renders ErrorBoundary component when there is an error', () => {
+  /* eslint-disable no-console */
   console.error = jest.fn();
   const { getByText } = reduxRendering(
     <ErrorBoundary>
@@ -18,4 +19,5 @@ test('it renders ErrorBoundary component when there is an error', () => {
   );
   expect(getByText(/issue processing your last request/i)).toBeDefined();
   expect(console.error).toHaveBeenCalled();
+  /* eslint-enable no-console */
 });

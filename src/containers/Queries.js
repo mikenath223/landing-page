@@ -32,8 +32,8 @@ const Queries = ({ surveyApiData }) => {
   };
 
   return (
-    <div className="queryWrap">
-      <h1>Quiz</h1>
+    <div className="query-wrap">
+      <h1 className="query-wrap-head">Quiz</h1>
       {
         surveyApiData.map((dataObj, i) => (
           <Query

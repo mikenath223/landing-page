@@ -295,6 +295,24 @@
 
   .midSectionSexx {
     margin-top: 60px;
-    background-position: 30% 60%;
+    background-position-y: 40%;
+  }
+
+  .erectileArticle {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .header {
+    padding: 10px;
+  }
+
+  .healthPhotos {
+    max-width: 200px;
+  }
+
+  .midSectArticles {
+    padding: 0;
   }
 }

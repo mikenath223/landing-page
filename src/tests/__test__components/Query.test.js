@@ -4,17 +4,25 @@ import reduxRendering from '../__test__containers/App.test';
 import '@testing-library/jest-dom/extend-expect';
 import Query from '../../components/Query';
 
-const { question, options } = {
-
-};
-
 afterEach(cleanup);
+const mockInput = {
+  question: "Which image matches your hairloss",
+  options: [{ "Yes": true }, { "No": false }]
+}
+
 it('renders Query without crashing', () => {
-  reduxRendering(<Query />);
+  reduxRendering(
+    <Query />,
+  );
 });
 
-test('contains text for separate result cases', () => {
-  const { getByTestId } = reduxRendering(<Query />);
-  expect(getByTestId('treated')).toHaveTextContent('Great news! We have the perfect treatment');
-  expect(getByTestId('not-treated')).toHaveTextContent('Unfortunately, we are unable to prescribe this medication for you');
+test('it renders right text on render', () => {
+  const { getByText, getByTestId } = reduxRendering(
+    <Query
+      dataObj={mockInput}
+    />);
+  expect(getByTestId('question')).toHaveTextContent(
+    'Which image matches your hairloss');
+  expect(getByText('false')).toBeInTheDocument();
+  expect(getByText('true')).toBeInTheDocument();
 });
