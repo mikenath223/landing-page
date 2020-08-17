@@ -8,7 +8,8 @@ import './styles/reset.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
-const rendered = () => ReactDOM.render(
+
+ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <ErrorBoundary>
@@ -18,15 +19,5 @@ const rendered = () => ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
-// To configure react-axe package for a11y testing on dev mode.
-if (process.env.NODE_ENV !== 'production') {
-  import('react-axe').then(axe => {
-    axe.default(React, ReactDOM, 1000);
-    rendered()
-  });
-} else {
-  rendered()
-}
 
 serviceWorker.unregister();

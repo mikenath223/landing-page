@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import fetchDataReducer from './slices/fetchDataSlice';
+import queryApiReducer from './slices/queryApiSlice';
 import giveTreatmentReducer from './slices/giveTreatmentSlice';
 
 export default configureStore({
   reducer: {
     // valueInThestore: reducerFromSlice
-    queryapi: fetchDataReducer,
+    queryApi: queryApiReducer,
     giveTreatment: giveTreatmentReducer,
   },
 });

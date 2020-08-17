@@ -9,6 +9,7 @@ const Query = ({
 }) => {
   const { options, question } = dataObj;
 
+
   return (
     <div className={(displayQuestion === queryNum) ? 'show-elem' : 'hide-elem'}>
       <div className={styles.questionInfo}>
@@ -35,7 +36,6 @@ const Query = ({
               <button
                 key={uuidv4()}
                 type="submit"
-                
                 className={styles.eachOption}
                 onClick={handleClick}
                 tabIndex={(i + 1) * queryNum}
@@ -59,7 +59,7 @@ const Query = ({
 export default Query;
 
 Query.defaultProps = {
-  dataObj: { },
+  dataObj: {},
   queryNum: 0,
   queryAmount: 0,
   displayQuestion: 0,
