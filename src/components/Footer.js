@@ -12,24 +12,24 @@ const Footer = () => (
         <img src={footerLogo} alt="manual-brand-logo" className={styles.brandLogo} />
       </div>
       <ul className={styles.footerGroupLinks}>
-        <li>PRODUCT</li>
-        <li>Popular</li>
-        <li>Trending</li>
-        <li>Guided</li>
-        <li>Products</li>
+        <li data-testid="product">PRODUCT</li>
+        <li aria-label="footer link">Popular</li>
+        <li aria-label="footer link">Trending</li>
+        <li aria-label="footer link">Guided</li>
+        <li aria-label="footer link">Products</li>
       </ul>
       <ul className={styles.footerGroupLinks}>
-        <li>COMPANY</li>
-        <li>Press Releases</li>
-        <li>Mission</li>
-        <li>Strategy</li>
-        <li>About</li>
+        <li aria-label="footer link">COMPANY</li>
+        <li aria-label="footer link">Press Releases</li>
+        <li aria-label="footer link">Mission</li>
+        <li aria-label="footer link">Strategy</li>
+        <li aria-label="footer link">About</li>
       </ul>
       <ul className={styles.footerGroupLinks}>
-        <li>INFO</li>
-        <li>Support</li>
-        <li>Customer Service</li>
-        <li>Get Started Guide</li>
+        <li aria-label="footer link">INFO</li>
+        <li aria-label="footer link">Support</li>
+        <li aria-label="footer link">Customer Service</li>
+        <li aria-label="footer link">Get Started Guide</li>
       </ul>
       <ul className={styles.footerGroupLinks}>
         <li>FOLLOW US</li>
