@@ -82,13 +82,14 @@
   }
 }
 
-@media (max-width: 810px) {
+@media (max-width: 870px) {
   .footer {
     padding: 50px 0 0 0;
   }
 
   .footerMenu {
     padding: 0 15px;
+    height: 550px;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     justify-content: center;
   }
@@ -102,5 +103,13 @@
   .bottomBar {
     height: auto;
     padding-top: 0;
+  }
+
+  .bottomBar small {
+    margin-bottom: 30px;
+  }
+
+  .socialLinks img {
+    margin-right: 15px;
   }
 }

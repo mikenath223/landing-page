@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 body {
   margin: 0;
+  min-height: 100vh;
+  width: 100%;
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,9 +17,13 @@ body {
   display: initial;
 }
 
-.queryWrap {
-  width: 700px;
+.query-wrap {
+  width: 90%;
   margin: 50px auto;
+}
+
+.query-wrap-head {
+  text-align: center;
 }
 
 ul li {
@@ -29,13 +36,7 @@ a {
 }
 
 .result-text {
-  margin: 10px;
-}
-
-@media (max-width: 800px) {
-  .queryWrap {
-    width: 500px;
-  }
+  padding: 10px;
 }
 
 @media (max-width: 560px) {
