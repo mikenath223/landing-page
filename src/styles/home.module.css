@@ -152,6 +152,10 @@
     justify-content: space-around;
   }
 
+  .midSectionSexx {
+    background-position: 30% 20%;
+  }
+
   .midSectArticles {
     padding-top: 100px;
   }
@@ -200,10 +204,6 @@
     height: 240px;
     padding-top: 10px;
     width: 50%;
-  }
-
-  .midSectionSexx {
-    background-position: 30% 20%;
   }
 
   .erectileArticle {

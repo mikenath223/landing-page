@@ -1,9 +1,17 @@
 import React from 'react';
-import { cleanup } from '@testing-library/react';
-import reduxRendering from '../__test__containers/App.test';
+import { render, cleanup } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import store from '../../store/store';
 import Result from '../../components/Result';
 
 afterEach(cleanup);
+const reduxRendering = component => ({
+  ...render(
+    <Provider store={store}>
+      {component}
+    </Provider>,
+  ),
+});
 const treatment = {
   value: 'treat',
   check: false,
