@@ -1,4 +1,5 @@
 # [![CircleCI](https://circleci.com/gh/cypress-io/circleci-orb.svg?style=svg)](https://circleci.com/gh/cypress-io/circleci-orb) ![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/cypress-io/cypress)
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
 
@@ -25,8 +26,13 @@ A single landing page quiz app built with the React ad Redux frameworks to bette
 - The user on clicking the take quiz button is shown a quiz with an array of options to choose from.
 - The first question quizzes the user on his/her type of hair baldness condition.
 - The second and third questions have only a true and false option.
-- On answering the last question a final result is then returned to the user. 
+- On answering the last question a final result is then returned to the user.
 - If the user answered true in any of the last two questions a result is shown that prevents the user from accessing the medication, otherwise the user gets shown a result allowing access to the baldness medication.
+
+## Development Cycle
+
+- While working on the JSON object I noticed that the Images in the JSON object where made the keys of their respective Objects, and because they contained special characters it made the entire JSON object none-parseable. This is because JSON keys are expected to be just strings and not contain special characters. To fix the bug I interchanged the keys and the values of the object, thereby making the Images values in their object.
+- However in the App I showcased both the keys and values of the object. So the end user result stayed the same.
 
 
 |  Landing-page Screenshot | Quiz |
@@ -50,7 +56,7 @@ A single landing page quiz app built with the React ad Redux frameworks to bette
 - Jest auto watch
 - @testing-library/react
 - Cypress test tool
-- CircleCI integration 
+- CircleCI integration
 - CSS Modules
 
 <!-- LIVE PREVIEW -->
@@ -94,7 +100,7 @@ Start the server
 your@pc:~$ npm start
 ```
 
-The app will open on your local host port 3000.(http://localhost:3000)[http://localhost:3000]
+The app will open on your local host port 3000. [http://localhost:3000](http://localhost:3000)
 
 <!-- run tests -->
 
@@ -111,7 +117,6 @@ Run specific Jest tests
 ```Shell
 your@pc:~$ npm test src/tests/<testfile>
 ```
-
 
 Run Cypress tests on browser
 
@@ -130,6 +135,7 @@ Run Cypress tests on console
 ```Shell
 your@pc:~$ npm run cypress:all --spec cypress/integration/my-spec.js>
 ```
+
 - Please Refer to the [Cypress docs](https://docs.cypress.io/guides/guides/command-line.html#How-to-run-commands) for further testing options.
 
 <!-- Future features -->
@@ -153,7 +159,6 @@ This project was bootstrapped with the create-react-app tool.
 - Twitter: [@Michgolden_Nath](https://twitter.com/MichgoldenU)
 - Linkedin: [Ukeje Michgolden](https://https://www.linkedin.com/in/michgoldenukeje/)
   <br />
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
