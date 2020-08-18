@@ -118,7 +118,8 @@ Run specific Jest tests
 your@pc:~$ npm test src/tests/<testfile>
 ```
 
-Run Cypress tests on browser
+Run Cypress tests on browser. 
+>Kindly start the server with `npm start` before running Cypress`
 
 ```Shell
 your@pc:~$ npm run cypress open
