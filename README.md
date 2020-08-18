@@ -1,70 +1,170 @@
-# landing-page
+# [![CircleCI](https://circleci.com/gh/cypress-io/circleci-orb.svg?style=svg)](https://circleci.com/gh/cypress-io/circleci-orb) ![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/cypress-io/cypress)
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## Landing Page Quiz
 
-## Available Scripts
+A single landing page quiz app built with the React ad Redux frameworks to better explain Manual value proposition to users. Built as a survey experiment, that helps guide users through deciding if the product is the right fit for them.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [User Features](#user-features)
+- [Built With](#built-with)
+- [Technologies Employed](#technologies-employed)
+- [Live Preview](#live-preview)
+- [Required Installations](#required-installations)
+- [App Installation](#instalation)
+- [Future Features](#future-features)
+- [Author](#author)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- User features -->
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## User Features
 
-### `npm test`
+- A user accesses the single home page design.
+- The user on clicking the take quiz button is shown a quiz with an array of options to choose from.
+- The first question quizzes the user on his/her type of hair baldness condition.
+- The second and third questions have only a true and false option.
+- On answering the last question a final result is then returned to the user. 
+- If the user answered true in any of the last two questions a result is shown that prevents the user from accessing the medication, otherwise the user gets shown a result allowing access to the baldness medication.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+|  Landing-page Screenshot | Quiz |
+| ------------- | ------------- |
+<img src="src/images/screenshot.png" width="250" height="280"/> | <img src="src/images/quiz.png" width="250" height="280"/>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ <!-- BUILT WITH -->
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- VsCode
+- Windows
 
-### `npm run eject`
+<!-- TECHNOLOGIES EMPLOYED -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Technologies Employed
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React Hooks
+- Redux Toolkit(RTK)
+- JavaScript
+- Jest auto watch
+- @testing-library/react
+- Cypress test tool
+- CircleCI integration 
+- CSS Modules
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<!-- LIVE PREVIEW -->
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## LIVE PREVIEW
+
+- Here is a link to the live frontend version of the app - https://queryapp.herokuapp.com/
+
+  <!-- REQUIRED INSTALLATION -->
+
+## REQUIRED INSTALLATIONS
+
+- NodeJs
+- npm v5.2.0+
+
+<!-- INSTALLATION -->
+
+## Installation of This Repository
+
+Clone the Repository,
+
+```Shell
+your@pc:~$ git clone https://github.com/mikenath223/landing-page.git
+```
+
+Go to the downloaded folder
+
+```Shell
+your@pc:~$ cd landing-page/
+```
+
+Install all packages
+
+```Shell
+your@pc:~$ npm install
+```
+
+Start the server
+
+```Shell
+your@pc:~$ npm start
+```
+
+The app will open on your local host port 3000.(http://localhost:3000)[http://localhost:3000]
+
+<!-- run tests -->
+
+## Run tests
+
+Run all Jest tests
+
+```Shell
+your@pc:~$ npm test
+```
+
+Run specific Jest tests
+
+```Shell
+your@pc:~$ npm test src/tests/<testfile>
+```
+
+
+Run Cypress tests on browser
+
+```Shell
+your@pc:~$ npm run cypress open
+```
+
+Run specific Cypress tests on browser
+
+```Shell
+your@pc:~$ npm run cypress/integration/my-spec.js
+```
+
+Run Cypress tests on console
+
+```Shell
+your@pc:~$ npm run cypress:all --spec cypress/integration/my-spec.js>
+```
+- Please Refer to the [Cypress docs](https://docs.cypress.io/guides/guides/command-line.html#How-to-run-commands) for further testing options.
+
+<!-- Future features -->
+
+## Future Features
+
+- Integrate CSS transitions and animations if required.
 
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+This project was bootstrapped with the create-react-app tool.
 
-### Code Splitting
+# Author
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+**Michgolden Ukeje**
 
-### Analyzing the Bundle Size
+- Github: [@mikenath223](https://github.com/mikenath223)
+- Twitter: [@Michgolden_Nath](https://twitter.com/MichgoldenU)
+- Linkedin: [Ukeje Michgolden](https://https://www.linkedin.com/in/michgoldenukeje/)
+  <br />
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[contributors-shield]: https://img.shields.io/github/contributors/mikenath223/landing-page.svg?style=flat-square
+[contributors-url]: https://github.com/mikenath223/landing-page/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/mikenath223/landing-page
+[forks-url]: https://github.com/mikenath223/landing-page/network/members
+[stars-shield]: https://img.shields.io/github/stars/mikenath223/landing-page
+[stars-url]: https://github.com/mikenath223/landing-page/stargazers
+[issues-shield]: https://img.shields.io/github/issues/mikenath223/landing-page
+[issues-url]: https://github.com/mikenath223/landing-page/issues
+[license-shield]: https://img.shields.io/github/license/mikenath223/landing-page
+[license-url]: https://github.com/mikenath223/landing-page/blob/master/LICENSE.txt
