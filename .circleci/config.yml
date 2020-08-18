@@ -20,3 +20,4 @@ jobs:
           command: npm test
           name: Run Cypress Tests
           command: cypress/run
+          command: cypress/run
