@@ -39,6 +39,12 @@ a {
   padding: 10px;
 }
 
+.error {
+  color: red;
+  padding-top: 230px;
+  text-align: center;
+}
+
 @media (max-width: 560px) {
   .queryWrap {
     width: auto;

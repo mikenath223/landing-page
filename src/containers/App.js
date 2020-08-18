@@ -16,7 +16,7 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch('questionnaire.json', {
+    fetch('quiz.json', {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
@@ -30,10 +30,10 @@ const App = () => {
 
   if (loadSurvey && error) {
     return (
-      <h2>
+      <h3 className="error">
         We are sorry but there has been an issue fetching your treatment questionnaire.
         Please contact support.
-      </h2>
+      </h3>
     );
   } if (loadSurvey && !error) {
     return (
