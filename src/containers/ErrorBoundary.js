@@ -16,11 +16,11 @@ class ErrorBoundary extends Component {
     const { children } = this.props;
     if (hasError) {
       return (
-        <h1>
+        <h3 className="error">
           We are sorry. We encountered an issue
           processing your last request.
           Please contact support.
-        </h1>
+        </h3>
       );
     }
 

@@ -69,6 +69,7 @@
   .footer {
     height: auto;
   }
+
   .footerMenu {
     grid-template-columns: 220px repeat(4, 1fr);
   }
@@ -78,29 +79,35 @@
   .footer {
     padding: 50px 0 0 0;
   }
+
   .footerMenu {
     padding: 0 15px;
     height: 550px;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     justify-content: center;
   }
+
   .footerGroupLinks {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
   }
+
   .logoWrap {
     display: flex;
     justify-content: center;
     padding-left: 10px;
   }
+
   .bottomBar {
     height: auto;
     padding-top: 0;
   }
+
   .bottomBar small {
     margin-bottom: 30px;
   }
+
   .socialLinks img {
     margin-right: 15px;
   }

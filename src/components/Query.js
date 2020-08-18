@@ -9,7 +9,6 @@ const Query = ({
 }) => {
   const { options, question } = dataObj;
 
-
   return (
     <div className={(displayQuestion === queryNum) ? 'show-elem' : 'hide-elem'}>
       <div className={styles.questionInfo}>
@@ -40,11 +39,11 @@ const Query = ({
                 onClick={handleClick}
                 tabIndex={(i + 1) * queryNum}
               >
-                {(html !== true && html !== 'false')
+                {(html !== true && html !== 'false') // Shows images and baldness defects
                   ? ReactHtmlParser(html) : ''}
 
                 <span className={styles.questionButton}>
-                  {(html !== true && html !== 'false')
+                  {(html !== true && html !== 'false') // Shows true and false options
                     ? retrievedObjKey : ReactHtmlParser(html)}
                 </span>
               </button>

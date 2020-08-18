@@ -1,5 +1,7 @@
 import React from 'react';
-import { render, cleanup, fireEvent, act } from '@testing-library/react';
+import {
+  render, cleanup, fireEvent, act,
+} from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../../store/store';
 import App from '../../containers/App';
@@ -25,7 +27,7 @@ test('landing page contains the TAKE QUIZ button', () => {
 it('mounts Query when take-quiz is clicked', () => {
   const { container, getByTestId } = reduxRendering(<App />);
   act(() => {
-    fireEvent.click(getByTestId('take-quiz'))
+    fireEvent.click(getByTestId('take-quiz'));
   });
   expect(container.innerHTML).toMatch('Quiz');
 });
