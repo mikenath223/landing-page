@@ -152,6 +152,10 @@
     justify-content: space-around;
   }
 
+  .midSectionSexx {
+    background-position: 30% 20%;
+  }
+
   .midSectArticles {
     padding-top: 100px;
   }
@@ -202,13 +206,9 @@
     width: 50%;
   }
 
-  .midSectionSexx {
-    background-position: 30% 20%;
-  }
-
   .erectileArticle {
     height: 200px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
   }
 }
 
@@ -295,6 +295,24 @@
 
   .midSectionSexx {
     margin-top: 60px;
-    background-position: 30% 60%;
+    background-position-y: 40%;
+  }
+
+  .erectileArticle {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .header {
+    padding: 10px;
+  }
+
+  .healthPhotos {
+    max-width: 200px;
+  }
+
+  .midSectArticles {
+    padding: 0;
   }
 }

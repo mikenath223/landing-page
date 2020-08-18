@@ -1,34 +1,42 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import Question from '../components/Question';
+import {
+  updateTreatment,
+  selectTreatment,
+} from '../store/slices/giveTreatmentSlice';
+import Query from '../components/Query';
 import Result from '../components/Result';
 
 const Queries = ({ surveyApiData }) => {
   const [displayQuestion, setDisplayQuestion] = useState(1);
-  const [giveTreatment, setGiveTreatment] = useState(false);
-  const [isSurveyFinished, setIsSurveyFinished] = useState(false);
+
+  const treatment = useSelector(selectTreatment);
+  const setGiveTreatment = useDispatch();
 
   const queryAmount = surveyApiData.length;
-
   const handleClick = event => {
     setDisplayQuestion(state => state + 1);
-
-    if (event.target.textContent === 'Yes') {
-      setGiveTreatment(true);
+    if (event.target.textContent === 'true') {
+      setGiveTreatment(updateTreatment({
+        value: 'dont-treat',
+      }));
     }
-
-    const surveyFinished = `${displayQuestion}` === `${queryAmount}`;
+    const surveyFinished = displayQuestion === queryAmount;
     if (surveyFinished) {
-      setIsSurveyFinished(true);
+      setGiveTreatment(updateTreatment({
+        check: true,
+      }));
     }
   };
 
   return (
-    <div className="queryWrap">
+    <div className="query-wrap">
+      <h1 className="query-wrap-head">Quiz</h1>
       {
         surveyApiData.map((dataObj, i) => (
-          <Question
+          <Query
             key={uuidv4()}
             dataObj={dataObj}
             queryNum={i + 1}
@@ -39,8 +47,7 @@ const Queries = ({ surveyApiData }) => {
         ))
       }
       <Result
-        isSurveyFinished={isSurveyFinished}
-        giveTreatment={giveTreatment}
+        treatment={treatment}
       />
     </div>
   );
