@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     working_directory: ~/redux-async
@@ -19,4 +19,4 @@ jobs:
           name: Run Jest Tests
           command: npm test
           name: Run Cypress Tests
-          command: npm cypress
+          command: cypress/run

@@ -36,6 +36,7 @@ a {
 }
 
 .result-text {
+  font-style: italic;
   padding: 10px;
 }
 
