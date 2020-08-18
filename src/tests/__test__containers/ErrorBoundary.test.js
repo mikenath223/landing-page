@@ -1,9 +1,18 @@
 import React from 'react';
-import { cleanup } from '@testing-library/react';
-import reduxRendering from './App.test';
+import { render, cleanup } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import store from '../../store/store';
 import ErrorBoundary from '../../containers/ErrorBoundary';
 
 afterEach(cleanup);
+const reduxRendering = component => ({
+  ...render(
+    <Provider store={store}>
+      {component}
+    </Provider>,
+  ),
+});
+
 const Child = () => {
   throw new Error();
 };

@@ -31,7 +31,7 @@ A single landing page quiz app built with the React ad Redux frameworks to bette
 
 |  Landing-page Screenshot | Quiz |
 | ------------- | ------------- |
-<img src="src/images/screenshot.png" width="250" height="280"/> | <img src="src/images/quiz.png" width="250" height="280"/>
+<img src="src/images/screenshot.png" width="270" height="280"/> | <img src="src/images/quiz.png" width="270" height="280"/>
 
  <!-- BUILT WITH -->
 
